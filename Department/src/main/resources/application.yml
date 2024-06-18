@@ -1,0 +1,30 @@
+spring:
+  config:
+    activate:
+      on-profile: qa
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    show-sql: true
+    username: root
+    dev:
+      url: jdbc:mysql://localhost:3306/dept_db
+      jpa:
+        hibernate:
+          ddl-auto: update
+    qa:
+      url: jdbc:mysql://localhost:3306/dept_db_qa
+      jpa:
+        hibernate:
+          ddl-auto: update
+      management:
+        endpoints:
+          web:
+            exposure:
+              include: "*"
+    prod:
+      url: jdbc:mysql://localhost:3306/dept_db_prod
+      jpa:
+        hibernate:
+          ddl-auto: update
