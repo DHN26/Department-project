@@ -1,1 +1,1 @@
-This is the first edit of readme file
+Includes Spring boot and Rest APIs
